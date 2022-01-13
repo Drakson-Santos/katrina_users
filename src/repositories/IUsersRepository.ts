@@ -5,6 +5,6 @@ export interface IUsersRepository {
     findByEmail(email: string, getPassword?: boolean): Promise<User | undefined>;
     findAll(): Promise<User[]>;
     findById(id: string): Promise<User>;
-    // update(job: Job): Promise<Job | void>;
+    update(user: User): Promise<User | void>;
     // delete(id: string): Promise<void>;
 }
