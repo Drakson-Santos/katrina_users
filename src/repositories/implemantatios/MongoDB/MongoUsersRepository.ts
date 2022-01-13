@@ -1,3 +1,4 @@
+import mongoose from "../../../config/databases/mongoDataBase";
 import { User } from "../../../entities/User";
 import UserDB from "../../../schemas/user";
 import { IUsersRepository } from "../../IUsersRepository";
@@ -17,17 +18,17 @@ export class MongoUsersRepositoriy implements IUsersRepository {
         }
     }
 
-    // public async findAll(): Promise<Job[]> {
-    //     const jobs = await Jobs.find();
-    //     return jobs;
-    // }
+    public async findAll(): Promise<User[]> {
+        const users = await UserDB.find();
+        return users;
+    }
 
-    // public async findById(id: string): Promise<Job> {
-    //     if (mongoose.Types.ObjectId.isValid(id)){
-    //         const job = await Jobs.findById(id);
-    //         return job;
-    //     }
-    // }
+    public async findById(id: string): Promise<User> {
+        if (mongoose.Types.ObjectId.isValid(id)){
+            const user = await UserDB.findById(id);
+            return user;
+        }
+    }
 
     // public async update(job: Job): Promise<void> {
     //     await Jobs.findByIdAndUpdate(job.id, job);
