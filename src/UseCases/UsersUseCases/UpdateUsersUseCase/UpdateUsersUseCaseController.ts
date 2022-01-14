@@ -9,13 +9,14 @@ export class UpdateUsersUseCaseController {
 
     async execute(request: Request, response: Response): Promise<Response> {
         const { id } = request.query;
-        const { name, email, password } = request.body;
+        const { name, email, password, project_id } = request.body;
         try {
             const user = await this.updateUsersUseCase.execute({
                 _id: id ? String(id) : "",
                 name,
                 email,
-                password
+                password,
+                project_id,
             });
             return response.status(200).send(user)
         } catch (error) {

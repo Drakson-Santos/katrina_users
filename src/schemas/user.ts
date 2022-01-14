@@ -22,15 +22,17 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    projects: {
+        type: [String],
+        default: [],
+    },
 });
 
 UserSchema.pre("save", async function (next) {
     const hash = await bcrypt.hash(this.password, 10);
     this.password = hash;
-
     next();
 });
-
 
 const UserDB = mongoose.model('User', UserSchema);
 

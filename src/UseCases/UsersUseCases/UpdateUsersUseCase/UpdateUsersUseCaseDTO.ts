@@ -3,4 +3,5 @@ export interface IUpdateUsersDTO {
     name: string;
     email: string;
     password: string;
+    project_id: string;
 }

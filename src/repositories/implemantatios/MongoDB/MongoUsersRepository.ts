@@ -43,8 +43,9 @@ export class MongoUsersRepositoriy implements IUsersRepository {
             return userUpdated;
         }
     }
+
     // public async delete(id: string): Promise<void> {
     //     await Jobs.findByIdAndDelete(id);
     // }
-
+    
 }
