@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "katrina_users",
   "author": "Darkson Bezerra",
   "email": "darksonbezerra123@gmail.com",
   "version": "1.0.0",
@@ -12,6 +12,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "express": "^4.17.1"
   },
   "devDependencies": {

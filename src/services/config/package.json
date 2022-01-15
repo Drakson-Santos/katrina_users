@@ -1,0 +1,28 @@
+{
+    "services": {
+        "katrina_users": {
+            "api": {
+                "hostname": "localhost",
+                "port": 3001,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "paths": {
+                    "USERS": "/users"
+                }
+            }
+        },
+        "katrina_projects": {
+            "api": {
+                "hostname": "localhost",
+                "port": 3002,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "paths": {
+                    "PROJECTS": "/projects"
+                }
+            }
+        }
+    }
+}

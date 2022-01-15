@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { GetUsersUseCaseUseCase } from "./RegisterNewUseCase";
+import { GetUsersUseCaseUseCase } from "./GetUsesUseCase";
 
 export class GetUsersUseCaseController {
 

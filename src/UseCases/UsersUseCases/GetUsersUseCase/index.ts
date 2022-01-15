@@ -1,6 +1,6 @@
 import { MongoUsersRepositoriy } from "../../../repositories/implemantatios/MongoDB/MongoUsersRepository";
-import { GetUsersUseCaseUseCase } from "./RegisterNewUseCase";
-import { GetUsersUseCaseController } from "./RegisterNewUserController";
+import { GetUsersUseCaseUseCase } from "./GetUsesUseCase";
+import { GetUsersUseCaseController } from "./GetUsesController";
 
 const _usersRepository = new MongoUsersRepositoriy();
 const _getUsersUseCase = new GetUsersUseCaseUseCase(_usersRepository);
