@@ -21,7 +21,7 @@ export class GetUsersUseCaseUseCase {
         const projects = await this.getAllProjects();
         data_users.forEach((user) => {
             let new_user = new User(user.toJSON())
-            user.projects.forEach((project_id: string) => {
+            user.projects_ids.forEach((project_id: string) => {
                 const project = projects.find((project) => project._id === project_id)
                 if (project) {
                     new_user.data_projects.push(project)

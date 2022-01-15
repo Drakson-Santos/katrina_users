@@ -4,7 +4,7 @@ export class User {
     public name: string;
     public email: string;
     public password: string;
-    public projects?: string[] = [];
+    public projects_ids?: string[] = [];
     public data_projects?: any[] = [];
 
     constructor(props: any) {

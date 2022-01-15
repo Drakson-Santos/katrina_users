@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
-    projects: {
+    projects_ids: {
         type: [String],
         default: [],
     },
